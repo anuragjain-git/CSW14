@@ -10,13 +10,58 @@
         alert("Hello "+name+ ", Welcome to ITER Coding Club.")
     </script>
     <style>
-        
+    body {background-color:black;margin:0;}
+        .div1 {
+    width: 200px;
+    margin: 200px auto 100px;
+    border: 1px solid black;
+    padding: 60px;
+    background-color:white;
+}
+
+h3 {
+    text-align: center;
+}
+
+button {
+    width: 60px;
+    height: 30px;
+    background-color:#0a0a23;
+    color: #fff;
+    border-radius: 10px;
+}
+
+button:hover {
+    background-color: rgb(27, 25, 25);
+}
+
+#b1 {
+   margin-right: 10px;
+   margin-left: 35px;
+}
+
+#btn {
+    position: absolute;
+    transition: .5s;
+  }
     </style>
 </head>
 <body>
-    <div>
-        <h1>How would you feel if you don't crack Amazon, Microsoft...?</h1>
-        <p>Without the professional study plan you need to get your dream jobs and advance your career without professional mentorship.</p>
+    <div class="div1">
+        <h3>Do You Want To Join ITER Coding Club?</h3>
+        <button id="b1">Yes</button>
+        <button id="btn">No</button>
+        <script>
+            const button = document.getElementById('btn');
+            const b1 = document.getElementById('b1');
+            button.addEventListener('mouseover', function () {
+                button.style.left = `${Math.ceil(Math.random() * 90)}%`;
+                button.style.top = `${Math.ceil(Math.random() * 90)}%`;
+            });
+            b1.addEventListener('click', function () {
+                alert("I Knew It!"); 
+            }) 
+    </script>
     </div>
 </body>
 </html>
